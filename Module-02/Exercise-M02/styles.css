@@ -1,0 +1,346 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 2.2;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li a {
+    color: rgb(252, 249, 249);
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: all 0.4s ease-in-out;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background-color: #FF5722;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero button:hover {
+    background-color: #E64A19;
+}
+
+/* Shop by Essentials */
+.shop-essentials {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.shop-essentials h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom */
+    gap: 10px; /* Jarak antar produk */
+   
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.product-card p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.product-card .discount {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.product-card button {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.product-card button:hover {
+    background-color: #E64A19;
+}
+
+
+
+/* Testimoni Section */
+.testimoni-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.testimoni-content {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.testimoni-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.testimoni-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.testimoni-mission {
+    display: flex;
+    gap: 20px;
+}
+
+.mission-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    text-align: center;
+}
+
+.testimoni-image {
+    width: 40%;
+}
+
+.testimoni-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    width: 23%;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 18px;
+    font-size: 1rem;
+}
+
+.footer-section input[type="email"] {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-section button {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Media Queries for Tablet */
+@media (max-width: 768px) {
+    .hero-content, .hero-image, .testimoni-content, .testimoni-image {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .hero-section, .testimoni-section {
+        flex-direction: column;
+    }
+
+    .testimoni-image img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        padding: 0 20px;
+    }
+
+    .footer-section h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Untuk layar ukuran tablet */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Ubah menjadi 2 kolom */
+    }
+}
+
+/* Untuk layar ukuran ponsel */
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* Ubah menjadi 1 kolom */
+    }
+}

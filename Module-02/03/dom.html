@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1 class="textElement">Javascript DOM</h1>
+        <button onclick="updateText()">Update Text</button>
+        <button onclick="addElement()">Add Element</button>
+        </button>
+    </div>
+    <script>
+        function updateText() {
+            const element = document.getElementsByClassName("textElement");
+            console.log(element[0]);
+            element[0].innerHTML = "<p>Update Javascript DOM</p>"
+        }
+
+        function addElement() {
+            const element = document.getElementById("container");
+            
+            const newElement = document.createElement("p");
+            newElement.textContent = "Ini Elemen Baru";
+            element.appendChild(newElement);
+            
+        }
+    </script>
+</body>
+</html>

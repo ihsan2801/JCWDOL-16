@@ -3,14 +3,14 @@
 ///////////////////////
 
 interface IStack {
-  push: (element: number) => void;
-  pop: () => void;
-  showElements: () => number[];
+  push: (element: number) => void;  // Menambahkan elemen ke dalam stack
+  pop: () => void; // Menghapus elemen dari stack, tidak punya parameter, tidak butuh data, karena pop hanya mengeluarkan index terakhir.
+  showElements: () => number[]; // Menampilkan seluruh elemen dalam stack, karena di-PRIVATE (Ditandai dengan #)
 }
 
 class Stack implements IStack {
-  #maxSize: number;
-  #container: number[];
+  #maxSize: number; // Menyimpan ukuran maksimum stack yg diset saat objek dibuat
+  #container: number[]; // Menyimpan elemen2 di dalam stack.
 
   constructor(maxSize: number = 10) {
     this.#maxSize = maxSize;
@@ -25,7 +25,7 @@ class Stack implements IStack {
     return this.#container.length === 0;
   }
 
-  push(element: number) {
+  push(element: number) { // Kalau elemen ini dimasukkan di constructor, kita hanya bisa memasukkan angka 10, angka 5 tidak bisa.
     if (this.#isFull()) {
       console.log("sudah penuh");
     } else {
@@ -42,23 +42,24 @@ class Stack implements IStack {
   }
 
   showElements() {
-    return this.#container;
+    return this.#container; // Untuk melihat isi stack karena di-PRIVATE
   }
 }
 
-const newStack = new Stack(6);
-newStack.push(10);
-newStack.push(5);
-newStack.push(8);
-newStack.push(4);
-newStack.push(7);
+const newStack = new Stack(6);  // --> DEFAULT PARAMETER
+                                // Objek Stack maksimum ada 6 (enam)
+newStack.push(10);              // Kalau constructor(maxSize: number = ) ada amgkanya (= 10), 
+newStack.push(5);               // sedangkan di argumennya kosong, berarti kita pake angka 10.
+newStack.push(8);               // Kalo const-nya kosong, argumen dikosongin juga, akan muncul 
+newStack.push(4);               // error (underline merah).
+newStack.push(7); 
 newStack.push(4);
 newStack.push(1);
 newStack.push(1);
-
 let show = newStack.showElements();
 console.log(show);
-newStack.pop();
+
+newStack.pop(); // --> Mengeluarkan data index terakhir
 newStack.pop();
 newStack.pop();
 newStack.pop();
@@ -156,6 +157,7 @@ console.log(cars);
 cars.forEach((i, idx) => {
   console.log(i);
 });
+
 
 ///////////////////////////////////
 // HASH TABLE / MAP DATA STRUCTURE
